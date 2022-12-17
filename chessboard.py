@@ -10,7 +10,7 @@ while running:
         if event.type==pygame.QUIT:
             running=False
             
-    screen.fill((255,255,255))
+    screen.fill((200,200,150))
     def make_collum(x:int,collum_num:int):
         count=0
         recty=0
@@ -24,13 +24,15 @@ while running:
             else:
                 if count%2==1:
                     pygame.draw.rect(screen,(0,0,0),(x,recty,100,100))
-    make_collum(0,0)
-    make_collum(100,1)
-    make_collum(200,2)
-    make_collum(300,3)
-    make_collum(400,4)
-    make_collum(500,5)
-    make_collum(600,6)
-    make_collum(700,7)
+    def make_chessboard():
+        make_collum(0,0)
+        make_collum(100,1)
+        make_collum(200,2)
+        make_collum(300,3)
+        make_collum(400,4)
+        make_collum(500,5)
+        make_collum(600,6)
+        make_collum(700,7)
+    make_chessboard()
     pygame.display.flip()
 pygame.quit()
